@@ -285,18 +285,88 @@ function findThumbnail(baseName) {
   }
 }
 
+// Utility: Resolve path to ensure it works regardless of hosting environment
+function resolvePath(path) {
+  if (!path) {
+    console.error('Empty path provided to resolvePath');
+    return 'src/images/video-fallback.jpg'; // Return fallback path if input is empty
+  }
+
+  // If it's a full URL, return as is
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+
+  // Normalize path by removing leading slash if present
+  if (path.startsWith('/')) {
+    path = path.substring(1);
+  }
+
+  // Handle relative paths starting with 'src/'
+  if (path.startsWith('src/')) {
+    // Keep as is, but ensure it's properly formatted
+    return path;
+  }
+
+  // Otherwise, assume it's a relative path and prepend 'src/'
+  return `src/${path}`;
+}
+
 // Utility: Create image element with lazy loading and error handling
 function createImageCard(img, className = 'card') {
   const div = document.createElement('div');
   div.className = className;
   const el = document.createElement('img');
-  el.src = img.path;
+
+  // Resolve and encode the path
+  const resolvedPath = resolvePath(img.path);
+
+  // Properly encode the URL to handle special characters
+  // First split the path into directory and filename parts
+  const lastSlashIndex = resolvedPath.lastIndexOf('/');
+  const directory = resolvedPath.substring(0, lastSlashIndex + 1);
+  const filename = resolvedPath.substring(lastSlashIndex + 1);
+
+  // Encode only the filename part to preserve the directory structure
+  const encodedPath = directory + encodeURIComponent(filename);
+  el.src = encodedPath;
+
   el.alt = img.caption || img.path;
   el.loading = 'lazy';
+
+  // Enhanced error handling
   el.onerror = () => {
+    console.error(`Failed to load image: ${el.src}`);
     el.style.display = 'none';
+
+    // Try with a different encoding method
+    if (!el.src.includes('?retry=true')) {
+      // Try with full URI encoding as a fallback
+      el.src = encodeURI(resolvedPath) + '?retry=true';
+      return;
+    }
+
+    // If still fails, show error overlay
     div.appendChild(createErrorOverlay('Image failed to load.'));
+
+    // Try to load a fallback image
+    const fallbackImg = document.createElement('img');
+    fallbackImg.src = 'src/images/video-fallback.jpg';
+    fallbackImg.alt = 'Fallback image';
+    fallbackImg.style.width = '100%';
+    fallbackImg.style.height = '100%';
+    fallbackImg.style.objectFit = 'cover';
+    fallbackImg.style.opacity = '0.7';
+
+    // Add error handling for the fallback image too
+    fallbackImg.onerror = () => {
+      console.error('Even fallback image failed to load');
+      fallbackImg.style.display = 'none';
+    };
+
+    div.appendChild(fallbackImg);
   };
+
   div.appendChild(el);
   return div;
 }
@@ -324,8 +394,17 @@ function createVideoCard(video, className = 'card') {
   if (!thumbnailPath || thumbnailPath.includes('video-fallback.jpg')) {
     img.src = 'src/images/video-fallback.jpg';
   } else {
-    // Encode the thumbnail path to handle spaces and special characters
-    img.src = encodeURI(thumbnailPath);
+    // Properly encode the thumbnail path to handle spaces and special characters
+    const resolvedPath = resolvePath(thumbnailPath);
+
+    // Split the path into directory and filename parts
+    const lastSlashIndex = resolvedPath.lastIndexOf('/');
+    const directory = resolvedPath.substring(0, lastSlashIndex + 1);
+    const filename = resolvedPath.substring(lastSlashIndex + 1);
+
+    // Encode only the filename part to preserve the directory structure
+    const encodedPath = directory + encodeURIComponent(filename);
+    img.src = encodedPath;
   }
 
   img.alt = video.title || video.path;
@@ -334,13 +413,22 @@ function createVideoCard(video, className = 'card') {
   img.style.objectFit = 'cover';
   img.loading = 'lazy';
 
-  // Handle image loading errors
+  // Handle image loading errors with multiple fallback strategies
   img.onerror = () => {
     console.log(`Thumbnail failed to load: ${img.src}`);
-    // Try to set fallback image if not already set
+
+    // Try with a different encoding method if not already using fallback
+    if (!img.src.includes('video-fallback.jpg') && !img.src.includes('?retry=true')) {
+      // Try with full URI encoding as a fallback
+      img.src = encodeURI(thumbnailPath) + '?retry=true';
+      return;
+    }
+
+    // If still fails or already using fallback, try the fallback image
     if (!img.src.includes('video-fallback.jpg')) {
       img.src = 'src/images/video-fallback.jpg';
     } else {
+      // If even the fallback fails, show error overlay
       img.style.display = 'none';
       div.appendChild(createErrorOverlay('Thumbnail failed to load.'));
     }
@@ -705,8 +793,14 @@ function openVideoModal(video) {
     videoPath = videoPath.substring(1);
   }
 
-  // Encode the path to handle spaces and special characters
-  const encodedPath = encodeURI(videoPath);
+  // Properly encode the path to handle spaces and special characters
+  // Split the path into directory and filename parts
+  const lastSlashIndex = videoPath.lastIndexOf('/');
+  const directory = videoPath.substring(0, lastSlashIndex + 1);
+  const filename = videoPath.substring(lastSlashIndex + 1);
+
+  // Encode only the filename part to preserve the directory structure
+  const encodedPath = directory + encodeURIComponent(filename);
 
   // Use our enhanced video player to load the video
   window.enhancedPlayer.loadVideo(encodedPath, video.title || baseName, (errorMessage, fileExt) => {
@@ -806,8 +900,16 @@ function openVideoModal(video) {
       if (thumbPath.startsWith('/')) {
         thumbPath = thumbPath.substring(1);
       }
-      // Encode the thumbnail path to handle spaces and special characters
-      fallbackImg.src = encodeURI(thumbPath);
+
+      // Properly encode the thumbnail path to handle spaces and special characters
+      // Split the path into directory and filename parts
+      const lastSlashIndex = thumbPath.lastIndexOf('/');
+      const directory = thumbPath.substring(0, lastSlashIndex + 1);
+      const filename = thumbPath.substring(lastSlashIndex + 1);
+
+      // Encode only the filename part to preserve the directory structure
+      const encodedThumbPath = directory + encodeURIComponent(filename);
+      fallbackImg.src = encodedThumbPath;
 
       fallbackImg.alt = video.title || 'Video thumbnail';
       fallbackImg.style.maxWidth = '100%';
@@ -848,7 +950,15 @@ function openVideoModal(video) {
     if (formatExists) {
       // Ensure path is relative (no leading slash)
       const formatPath = `src/videos/${baseName}.${format}`;
-      const encodedFormatPath = encodeURI(formatPath);
+
+      // Properly encode the path to handle special characters
+      // Split the path into directory and filename parts
+      const lastSlashIndex = formatPath.lastIndexOf('/');
+      const directory = formatPath.substring(0, lastSlashIndex + 1);
+      const filename = formatPath.substring(lastSlashIndex + 1);
+
+      // Encode only the filename part to preserve the directory structure
+      const encodedFormatPath = directory + encodeURIComponent(filename);
 
       // If this is a .ts format, add multiple MIME types
       if (format === 'ts') {
@@ -883,8 +993,16 @@ function openVideoModal(video) {
     if (captionPath.startsWith('/')) {
       captionPath = captionPath.substring(1);
     }
-    // Encode the caption path to handle spaces and special characters
-    track.src = encodeURI(captionPath);
+
+    // Properly encode the caption path to handle spaces and special characters
+    // Split the path into directory and filename parts
+    const lastSlashIndex = captionPath.lastIndexOf('/');
+    const directory = captionPath.substring(0, lastSlashIndex + 1);
+    const filename = captionPath.substring(lastSlashIndex + 1);
+
+    // Encode only the filename part to preserve the directory structure
+    const encodedCaptionPath = directory + encodeURIComponent(filename);
+    track.src = encodedCaptionPath;
 
     track.default = true;
     vidEl.appendChild(track);
@@ -909,8 +1027,8 @@ function openVideoModal(video) {
         }
       }
 
-      // Set src directly on video element
-      vidEl.src = encodeURI(videoPath);
+      // Set src directly on video element using the properly encoded path
+      vidEl.src = encodedPath; // Use the already properly encoded path
       vidEl.load();
       vidEl.play().catch(e => console.log('Error playing video:', e));
     }
@@ -1110,7 +1228,7 @@ function openVideoModal(video) {
 
     // Add download button
     const downloadBtn = document.createElement('a');
-    downloadBtn.href = encodeURI(videoPath);
+    downloadBtn.href = encodedPath; // Use the already properly encoded path
     downloadBtn.download = '';
     downloadBtn.textContent = '⬇️ Download Video';
     downloadBtn.style.padding = '10px 20px';
