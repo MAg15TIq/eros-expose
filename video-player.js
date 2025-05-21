@@ -98,8 +98,11 @@ class VideoPlayer {
   loadVideo(src, title = '', onError = null) {
     if (!src) {
       console.error('VideoPlayer: No source provided');
+      if (onError) onError('No video source provided', '');
       return;
     }
+
+    console.log(`Loading video: ${src}`);
 
     // Store the source and title
     this.currentSrc = src;
@@ -108,16 +111,47 @@ class VideoPlayer {
 
     // Get file extension
     const ext = this.getFileExtension(src);
+    console.log(`Video file extension: ${ext}`);
 
     // Clear any existing sources
     this.clearSources();
 
-    // Handle TS files with HLS.js if available
-    if (ext === 'ts' && window.Hls && Hls.isSupported()) {
-      this.loadWithHLS(src);
-    } else {
-      // For other formats, use standard HTML5 video
-      this.loadWithHTML5(src, ext);
+    // Try loading with direct path first
+    try {
+      // Handle TS files with HLS.js if available
+      if (ext === 'ts' && window.Hls && Hls.isSupported()) {
+        this.loadWithHLS(src);
+      } else {
+        // For other formats, use standard HTML5 video
+        this.loadWithHTML5(src, ext);
+      }
+    } catch (error) {
+      console.error('Error loading video:', error);
+
+      // Try with encoded path if direct path fails
+      if (!src.includes('?retry=')) {
+        console.log('Retrying with encoded path');
+
+        // First try with encodeURIComponent for the filename
+        const lastSlashIndex = src.lastIndexOf('/');
+        const directory = src.substring(0, lastSlashIndex + 1);
+        const filename = src.substring(lastSlashIndex + 1);
+        const encodedPath = directory + encodeURIComponent(filename) + '?retry=1';
+
+        this.loadVideo(encodedPath, title, onError);
+      } else if (src.includes('?retry=1')) {
+        // If first retry failed, try with full URI encoding
+        console.log('Retrying with full URI encoding');
+        const baseSrc = src.split('?')[0];
+        const encodedPath = encodeURI(baseSrc) + '?retry=2';
+
+        this.loadVideo(encodedPath, title, onError);
+      } else {
+        // If all retries fail, call the error callback
+        if (onError) {
+          onError(`Failed to load video after multiple attempts: ${error.message}`, ext);
+        }
+      }
     }
   }
 
@@ -629,6 +663,7 @@ class VideoPlayer {
 
     // Get the MIME type or default to mp4
     const mimeType = this.mimeTypes[ext] || 'video/mp4';
+    console.log(`Using MIME type: ${mimeType} for extension: ${ext}`);
 
     // Clear any existing sources first
     this.clearSources();

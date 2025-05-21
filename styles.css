@@ -348,8 +348,37 @@ main {
 }
 
 #modal-video {
-  background: red !important;
-  min-width: 200px;
-  min-height: 200px;
-  border: 2px solid yellow !important;
-} 
+  min-width: 320px;
+  min-height: 240px;
+  background-color: #000;
+  max-width: 90vw;
+  max-height: 80vh;
+}
+
+/* Fix for slideshow and video modals */
+.slideshow-modal, .video-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  transition: opacity 0.3s;
+}
+
+/* Error overlay styling */
+.media-error-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  border-radius: 8px;
+  z-index: 10;
+  text-align: center;
+  padding: 10px;
+}

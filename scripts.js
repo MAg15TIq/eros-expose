@@ -317,35 +317,44 @@ function createImageCard(img, className = 'card') {
   div.className = className;
   const el = document.createElement('img');
 
-  // Resolve and encode the path
+  // Resolve the path
   const resolvedPath = resolvePath(img.path);
 
-  // Properly encode the URL to handle special characters
-  // First split the path into directory and filename parts
-  const lastSlashIndex = resolvedPath.lastIndexOf('/');
-  const directory = resolvedPath.substring(0, lastSlashIndex + 1);
-  const filename = resolvedPath.substring(lastSlashIndex + 1);
-
-  // Encode only the filename part to preserve the directory structure
-  const encodedPath = directory + encodeURIComponent(filename);
-  el.src = encodedPath;
+  // Use direct path without encoding for local files
+  el.src = resolvedPath;
 
   el.alt = img.caption || img.path;
   el.loading = 'lazy';
+  el.style.width = '100%';
+  el.style.height = '100%';
+  el.style.objectFit = 'cover';
 
   // Enhanced error handling
   el.onerror = () => {
     console.error(`Failed to load image: ${el.src}`);
-    el.style.display = 'none';
 
-    // Try with a different encoding method
-    if (!el.src.includes('?retry=true')) {
-      // Try with full URI encoding as a fallback
-      el.src = encodeURI(resolvedPath) + '?retry=true';
+    // Try with encoding if direct path fails
+    if (!el.src.includes('?retry=')) {
+      // First try with encodeURIComponent for the filename
+      const lastSlashIndex = resolvedPath.lastIndexOf('/');
+      const directory = resolvedPath.substring(0, lastSlashIndex + 1);
+      const filename = resolvedPath.substring(lastSlashIndex + 1);
+      const encodedPath = directory + encodeURIComponent(filename);
+
+      console.log(`Retrying with encoded filename: ${encodedPath}`);
+      el.src = encodedPath + '?retry=1';
       return;
     }
 
-    // If still fails, show error overlay
+    // If first retry failed, try with full URI encoding
+    if (el.src.includes('?retry=1')) {
+      console.log(`Retrying with full URI encoding: ${resolvedPath}`);
+      el.src = encodeURI(resolvedPath) + '?retry=2';
+      return;
+    }
+
+    // If all retries fail, show error overlay
+    el.style.display = 'none';
     div.appendChild(createErrorOverlay('Image failed to load.'));
 
     // Try to load a fallback image
@@ -386,48 +395,57 @@ function createVideoCard(video, className = 'card') {
   const img = document.createElement('img');
 
   // Use the thumbnail from the video object if available, otherwise try to find it
-  // Check if the thumbnail exists before trying to load it
   const thumbnailPath = video.thumbnail || findThumbnail(baseName);
 
-  // Use a fallback image if we're not sure the thumbnail exists
-  if (!thumbnailPath || thumbnailPath.includes('video-fallback.jpg')) {
-    img.src = 'src/images/video-fallback.jpg';
-  } else {
-    // Properly encode the thumbnail path to handle spaces and special characters
-    const resolvedPath = resolvePath(thumbnailPath);
-
-    // Split the path into directory and filename parts
-    const lastSlashIndex = resolvedPath.lastIndexOf('/');
-    const directory = resolvedPath.substring(0, lastSlashIndex + 1);
-    const filename = resolvedPath.substring(lastSlashIndex + 1);
-
-    // Encode only the filename part to preserve the directory structure
-    const encodedPath = directory + encodeURIComponent(filename);
-    img.src = encodedPath;
-  }
-
+  // Set image properties
   img.alt = video.title || video.path;
   img.style.width = '100%';
   img.style.height = '100%';
   img.style.objectFit = 'cover';
   img.loading = 'lazy';
 
+  // Use a fallback image if we're not sure the thumbnail exists
+  if (!thumbnailPath || thumbnailPath.includes('video-fallback.jpg')) {
+    img.src = 'src/images/video-fallback.jpg';
+  } else {
+    // Use direct path first without encoding
+    const resolvedPath = resolvePath(thumbnailPath);
+    img.src = resolvedPath;
+  }
+
   // Handle image loading errors with multiple fallback strategies
   img.onerror = () => {
     console.log(`Thumbnail failed to load: ${img.src}`);
 
-    // Try with a different encoding method if not already using fallback
-    if (!img.src.includes('video-fallback.jpg') && !img.src.includes('?retry=true')) {
-      // Try with full URI encoding as a fallback
-      img.src = encodeURI(thumbnailPath) + '?retry=true';
+    // If not already using fallback and not already retried
+    if (!img.src.includes('video-fallback.jpg') && !img.src.includes('?retry=')) {
+      // First try with encodeURIComponent for the filename
+      const resolvedPath = resolvePath(thumbnailPath);
+      const lastSlashIndex = resolvedPath.lastIndexOf('/');
+      const directory = resolvedPath.substring(0, lastSlashIndex + 1);
+      const filename = resolvedPath.substring(lastSlashIndex + 1);
+      const encodedPath = directory + encodeURIComponent(filename);
+
+      console.log(`Retrying thumbnail with encoded filename: ${encodedPath}`);
+      img.src = encodedPath + '?retry=1';
+      return;
+    }
+
+    // If first retry failed, try with full URI encoding
+    if (img.src.includes('?retry=1')) {
+      const resolvedPath = resolvePath(thumbnailPath);
+      console.log(`Retrying thumbnail with full URI encoding: ${resolvedPath}`);
+      img.src = encodeURI(resolvedPath) + '?retry=2';
       return;
     }
 
     // If still fails or already using fallback, try the fallback image
     if (!img.src.includes('video-fallback.jpg')) {
+      console.log('Using fallback image for thumbnail');
       img.src = 'src/images/video-fallback.jpg';
     } else {
       // If even the fallback fails, show error overlay
+      console.error('Fallback image also failed to load');
       img.style.display = 'none';
       div.appendChild(createErrorOverlay('Thumbnail failed to load.'));
     }
@@ -787,20 +805,14 @@ function openVideoModal(video) {
   // Get the file extension
   const ext = getExt(video.path);
 
-  // Prepare the video path
+  // Prepare the video path - use direct path first
   let videoPath = video.path;
   if (videoPath.startsWith('/')) {
     videoPath = videoPath.substring(1);
   }
 
-  // Properly encode the path to handle spaces and special characters
-  // Split the path into directory and filename parts
-  const lastSlashIndex = videoPath.lastIndexOf('/');
-  const directory = videoPath.substring(0, lastSlashIndex + 1);
-  const filename = videoPath.substring(lastSlashIndex + 1);
-
-  // Encode only the filename part to preserve the directory structure
-  const encodedPath = directory + encodeURIComponent(filename);
+  // Use the direct path without encoding first
+  let encodedPath = videoPath;
 
   // Set the video title
   title.textContent = video.title || baseName;
@@ -1023,13 +1035,84 @@ function formatTime(seconds) {
   return `${m}:${s.toString().padStart(2, '0')}`;
 }
 
+// Initialize modals
+function initializeModals() {
+  console.log('Initializing modals');
+
+  // Initialize slideshow modal if needed
+  const slideshowModal = document.getElementById('slideshow-modal');
+  if (slideshowModal) {
+    console.log('Slideshow modal found');
+    // Close on overlay click
+    slideshowModal.addEventListener('click', e => {
+      if (e.target === slideshowModal || e.target.className === 'slideshow-overlay') {
+        slideshowModal.style.display = 'none';
+      }
+    });
+
+    // Close button
+    const closeBtn = document.getElementById('close-slideshow');
+    if (closeBtn) {
+      closeBtn.onclick = () => {
+        slideshowModal.style.display = 'none';
+      };
+    }
+  } else {
+    console.warn('Slideshow modal not found in the DOM');
+  }
+
+  // Initialize video modal if needed
+  const videoModal = document.getElementById('video-modal');
+  if (videoModal) {
+    console.log('Video modal found');
+    // Close on overlay click
+    videoModal.addEventListener('click', e => {
+      if (e.target === videoModal || e.target.className === 'video-overlay') {
+        videoModal.style.display = 'none';
+      }
+    });
+
+    // Close button
+    const closeBtn = document.getElementById('close-video');
+    if (closeBtn) {
+      closeBtn.onclick = () => {
+        videoModal.style.display = 'none';
+        // Pause the video when closing
+        const video = document.getElementById('modal-video');
+        if (video) video.pause();
+      };
+    }
+  } else {
+    console.warn('Video modal not found in the DOM');
+  }
+}
+
 // Main loader
 function loadAndRender() {
   try {
+    console.log('Loading and rendering page content');
+
+    // Set hero background if available
     setHeroBg();
-    renderFeatured();
-    renderPhotoGallery();
-    renderVideoGallery();
+
+    // Initialize modals first
+    initializeModals();
+
+    // Render content based on page
+    if (document.getElementById('featured-photos') || document.getElementById('featured-videos')) {
+      console.log('Rendering featured content');
+      renderFeatured();
+    }
+
+    if (document.getElementById('all-photos')) {
+      console.log('Rendering photo gallery');
+      renderPhotoGallery();
+    }
+
+    if (document.getElementById('all-videos')) {
+      console.log('Rendering video gallery');
+      renderVideoGallery();
+    }
 
     // Log success message
     console.log('Page loaded successfully');
