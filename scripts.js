@@ -280,7 +280,7 @@ function findThumbnail(baseName) {
     return `src/thumbnails/${baseName}.jpg`;
   } else {
     // Use a fallback image if the thumbnail doesn't exist
-    return 'src/images/video-fallback.jpg';
+    return 'public/images/video-fallback.jpg';
   }
 }
 
@@ -288,7 +288,7 @@ function findThumbnail(baseName) {
 function resolvePath(path) {
   if (!path) {
     console.error('Empty path provided to resolvePath');
-    return 'src/images/video-fallback.jpg'; // Return fallback path if input is empty
+    return 'public/images/video-fallback.jpg'; // Return fallback path if input is empty
   }
 
   // If it's a full URL, return as is
@@ -301,14 +301,31 @@ function resolvePath(path) {
     path = path.substring(1);
   }
 
+  // Check if we're running on Vercel or other deployment platform
+  const isProduction = window.location.hostname !== 'localhost' &&
+                      !window.location.hostname.includes('127.0.0.1');
+
   // Handle relative paths starting with 'src/'
   if (path.startsWith('src/')) {
-    // Keep as is, but ensure it's properly formatted
+    // For production environments, use the full GitHub raw URL
+    if (isProduction) {
+      // Use GitHub raw content URL for the main branch
+      return `https://raw.githubusercontent.com/MAg15TIq/eros-expose/master/${path}`;
+    }
+    // For local development, keep as is
     return path;
   }
 
   // Otherwise, assume it's a relative path and prepend 'src/'
-  return `src/${path}`;
+  const fullPath = `src/${path}`;
+
+  // For production environments, use the full GitHub raw URL
+  if (isProduction) {
+    return `https://raw.githubusercontent.com/MAg15TIq/eros-expose/master/${fullPath}`;
+  }
+
+  // For local development, keep as is
+  return fullPath;
 }
 
 // Utility: Create image element with lazy loading and error handling
@@ -359,7 +376,8 @@ function createImageCard(img, className = 'card') {
 
     // Try to load a fallback image
     const fallbackImg = document.createElement('img');
-    fallbackImg.src = 'src/images/video-fallback.jpg';
+    // Use the public directory for fallback images which will always be available
+    fallbackImg.src = 'public/images/video-fallback.jpg';
     fallbackImg.alt = 'Fallback image';
     fallbackImg.style.width = '100%';
     fallbackImg.style.height = '100%';
@@ -406,7 +424,7 @@ function createVideoCard(video, className = 'card') {
 
   // Use a fallback image if we're not sure the thumbnail exists
   if (!thumbnailPath || thumbnailPath.includes('video-fallback.jpg')) {
-    img.src = 'src/images/video-fallback.jpg';
+    img.src = 'public/images/video-fallback.jpg';
   } else {
     // Use direct path first without encoding
     const resolvedPath = resolvePath(thumbnailPath);
@@ -442,7 +460,7 @@ function createVideoCard(video, className = 'card') {
     // If still fails or already using fallback, try the fallback image
     if (!img.src.includes('video-fallback.jpg')) {
       console.log('Using fallback image for thumbnail');
-      img.src = 'src/images/video-fallback.jpg';
+      img.src = 'public/images/video-fallback.jpg';
     } else {
       // If even the fallback fails, show error overlay
       console.error('Fallback image also failed to load');

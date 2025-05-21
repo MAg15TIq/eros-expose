@@ -13,17 +13,18 @@ build/
 ffmpeg/
 
 # Media files
-src/images/
-src/videos/
-src/thumbnails/
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.mp4
-*.webm
-*.avi
-*.mov
+# Uncomment these lines if you want to exclude media files from git
+# src/images/
+# src/videos/
+# src/thumbnails/
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.mp4
+# *.webm
+# *.avi
+# *.mov
 
 # Environment variables
 .env
