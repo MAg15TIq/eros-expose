@@ -345,4 +345,11 @@ main {
   background: #1A1A1A;
   color: #fff;
   font-size: 1rem;
+}
+
+#modal-video {
+  background: red !important;
+  min-width: 200px;
+  min-height: 200px;
+  border: 2px solid yellow !important;
 } 

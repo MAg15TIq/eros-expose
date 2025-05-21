@@ -159,56 +159,55 @@ const images = [
 // NOTE: For .ts file support, users should use a modern browser like Chrome or Edge. Firefox may not support .ts playback natively. Prefer .mp4 for best compatibility.
 // Using relative paths to fix 404 errors
 const videos = [
-  { path: 'src/videos/Full Video - The best of hot Arabic MILF Sasha Pearl.ts', title: 'Full Video - The best of hot Arabic MILF Sasha Pearl', thumbnail: 'src/thumbnails/Full Video - The best of hot Arabic MILF Sasha Pearl.jpg' },
-  { path: 'src/videos/Femme Arab En Hijab Baisé Comme Une Salope . Beurette Amateur Voilée Squirt 💦💦💦 - Pornhub.com.ts', title: 'Femme Arab En Hijab Baisé Comme Une Salope . Beurette Amateur Voilée Squirt 💦💦💦 - Pornhub.com', thumbnail: 'src/thumbnails/Femme Arab En Hijab Baisé Comme Une Salope . Beurette Amateur Voilée Squirt 💦💦💦 - Pornhub.com.jpg' },
-  { path: 'src/videos/MIA KHALIFA - Mia Loves to Share Big Dick with her Stepmom or a Friend - Pornhub.com.ts', title: 'MIA KHALIFA - Mia Loves to Share Big Dick with her Stepmom or a Friend - Pornhub.com', thumbnail: 'src/thumbnails/MIA KHALIFA - Mia Loves to Share Big Dick with her Stepmom or a Friend - Pornhub.com.jpg' },
-  { path: 'src/videos/بیدار شدم دیدم کنارم نشسته میگه دوستت یه چیزایی بهم گفته پر مکالمه داستانی Step Mom - Pornhub.com.ts', title: 'بیدار شدم دیدم کنارم نشسته میگه دوستت یه چیزایی بهم گفته پر مکالمه داستانی Step Mom - Pornhub.com', thumbnail: 'src/thumbnails/بیدار شدم دیدم کنارم نشسته میگه دوستت یه چیزایی بهم گفته پر مکالمه داستانی Step Mom - Pornhub.com.jpg' },
-  { path: 'src/videos/اححححح حبيبي شبعني حوا اممممم على حويا ضرب ليا اححح حويني احبيبي Sex Marocain - Pornhub.com.ts', title: 'اححححح حبيبي شبعني حوا اممممم على حويا ضرب ليا اححح حويني احبيبي Sex Marocain - Pornhub.com', thumbnail: 'src/thumbnails/اححححح حبيبي شبعني حوا اممممم على حويا ضرب ليا اححح حويني احبيبي Sex Marocain - Pornhub.com.jpg' },
-  { path: 'src/videos/خارم میگه من همیشه به تو فکر می کردم سکس داستانی مکالمه فارسی قسمت آخر Step Sister - Pornhub.com.ts', title: 'خارم میگه من همیشه به تو فکر می کردم سکس داستانی مکالمه فارسی قسمت آخر Step Sister - Pornhub.com', thumbnail: 'src/thumbnails/خارم میگه من همیشه به تو فکر می کردم سکس داستانی مکالمه فارسی قسمت آخر Step Sister - Pornhub.com.jpg' },
-  { path: 'src/videos/Hijab Muslim Babe Gets Roughly Dominated - Pornhub.com.ts', title: 'Hijab Muslim Babe Gets Roughly Dominated - Pornhub.com', thumbnail: 'src/thumbnails/Hijab Muslim Babe Gets Roughly Dominated - Pornhub.com.jpg' },
-  { path: 'src/videos/Saudi Barbienjd getting Piped down by a BBC- باربي نجد السعوديه مع فحل اسود يروضها - Pornhub.com.ts', title: 'Saudi Barbienjd getting Piped down by a BBC- باربي نجد السعوديه مع فحل اسود يروضها - Pornhub.com', thumbnail: 'src/thumbnails/Saudi Barbienjd getting Piped down by a BBC- باربي نجد السعوديه مع فحل اسود يروضها - Pornhub.com.jpg' },
-  { path: 'src/videos/Azeri Gelin Otelde Amcini Sikib Agzina Spermani Bosalir - Pornhub.com.ts', title: 'Azeri Gelin Otelde Amcini Sikib Agzina Spermani Bosalir - Pornhub.com', thumbnail: 'src/thumbnails/Azeri Gelin Otelde Amcini Sikib Agzina Spermani Bosalir - Pornhub.com.jpg' },
-  { path: 'src/videos/Jamaican Cheating Wife Craving for some Arab Cum - Pornhub.com.ts', title: 'Jamaican Cheating Wife Craving for some Arab Cum - Pornhub.com', thumbnail: 'src/thumbnails/Jamaican Cheating Wife Craving for some Arab Cum - Pornhub.com.jpg' },
-  { path: 'src/videos/Muslim Wife Sex Tape - Pornhub.com.ts', title: 'Muslim Wife Sex Tape - Pornhub.com', thumbnail: 'src/thumbnails/Muslim Wife Sex Tape - Pornhub.com.jpg' },
-  { path: 'src/videos/ديوث مصري تستدعي صديق ابنها سالم العنتيل ليقوم بالواجب وقت ما زوجها فالشغل - Pornhub.com.ts', title: 'ديوث مصري تستدعي صديق ابنها سالم العنتيل ليقوم بالواجب وقت ما زوجها فالشغل - Pornhub.com', thumbnail: 'src/thumbnails/ديوث مصري تستدعي صديق ابنها سالم العنتيل ليقوم بالواجب وقت ما زوجها فالشغل - Pornhub.com.jpg' },
-  { path: 'src/videos/المعلم ينيك نوسة وتقوله عايزة امص زبك يامعلم دخل زبك فى كسى - Pornhub.com.ts', title: 'المعلم ينيك نوسة وتقوله عايزة امص زبك يامعلم دخل زبك فى كسى - Pornhub.com', thumbnail: 'src/thumbnails/المعلم ينيك نوسة وتقوله عايزة امص زبك يامعلم دخل زبك فى كسى - Pornhub.com.jpg' },
-  { path: 'src/videos/MIA KHALIFA - Busty Arab Babe taking Dick from White Man with Big Cock - Pornhub.com.ts', title: 'MIA KHALIFA - Busty Arab Babe taking Dick from White Man with Big Cock - Pornhub.com', thumbnail: 'src/thumbnails/MIA KHALIFA - Busty Arab Babe taking Dick from White Man with Big Cock - Pornhub.com.jpg' },
-  { path: 'src/videos/My Sisters Hot Big Titty Horny best Friend Catches me Jerking off to her in the Shower - Pornhub.com.ts', title: 'My Sisters Hot Big Titty Horny best Friend Catches me Jerking off to her in the Shower - Pornhub.com', thumbnail: 'src/thumbnails/My Sisters Hot Big Titty Horny best Friend Catches me Jerking off to her in the Shower - Pornhub.com.jpg' },
-  { path: 'src/videos/Full Video - New Sensations - Quinn Wilde Always Wants it Rough and Hard.ts', title: 'Full Video - New Sensations - Quinn Wilde Always Wants it Rough and Hard', thumbnail: 'src/thumbnails/Full Video - New Sensations - Quinn Wilde Always Wants it Rough and Hard.jpg' },
-  { path: 'src/videos/Sexy 18yo BABE Stays for Passionate Fucking & Gets first EXTREME SQUIRT\'S 💦 - Pornhub.com.ts', title: 'Sexy 18yo BABE Stays for Passionate Fucking & Gets first EXTREME SQUIRT\'S 💦 - Pornhub.com', thumbnail: 'src/thumbnails/Sexy 18yo BABE Stays for Passionate Fucking & Gets first EXTREME SQUIRT\'S 💦 - Pornhub.com.jpg' },
-  { path: 'src/videos/Missionary SQUUUIRTING Compilation !!! - Pornhub.com.ts', title: 'Missionary SQUUUIRTING Compilation !!! - Pornhub.com', thumbnail: 'src/thumbnails/Missionary SQUUUIRTING Compilation !!! - Pornhub.com.jpg' },
-  { path: 'src/videos/EXTREME SQUIRT🚨 Intense Fucking TEEN makes her Cum Hard - Pornhub.com.ts', title: 'EXTREME SQUIRT🚨 Intense Fucking TEEN makes her Cum Hard - Pornhub.com', thumbnail: 'src/thumbnails/EXTREME SQUIRT🚨 Intense Fucking TEEN makes her Cum Hard - Pornhub.com.jpg' },
-  { path: 'src/videos/I go to my Stepsister\'s Sauna and Fuck her Hard Alone. - Pornhub.com.ts', title: 'I go to my Stepsister\'s Sauna and Fuck her Hard Alone. - Pornhub.com', thumbnail: 'src/thumbnails/I go to my Stepsister\'s Sauna and Fuck her Hard Alone. - Pornhub.com.jpg' },
-  { path: 'src/videos/Full Video - New Sensations - Quinn Wilde Always Wants it Rough and Hard.mp4', title: 'Full Video - New Sensations - Quinn Wilde Always Wants it Rough and Hard', thumbnail: 'src/thumbnails/Full Video - New Sensations - Quinn Wilde Always Wants it Rough and Hard.jpg' },
-  { path: 'src/videos/EXTREME SQUIRT - she Orgasms so Hard, she almost Hit the Ceiling! ´ - Pornhub.com.ts', title: 'EXTREME SQUIRT - she Orgasms so Hard, she almost Hit the Ceiling! ´ - Pornhub.com', thumbnail: 'src/thumbnails/EXTREME SQUIRT - she Orgasms so Hard, she almost Hit the Ceiling! ´ - Pornhub.com.jpg' },
-  { path: 'src/videos/EXTREME SQUIRTING ORGASMS & ROUGH FUCKING! the BEST SQUIRT COMPILATION on Pornhub - Mimi Cica - Pornhub.com.ts', title: 'EXTREME SQUIRTING ORGASMS & ROUGH FUCKING! the BEST SQUIRT COMPILATION on Pornhub - Mimi Cica - Pornhub.com', thumbnail: 'src/thumbnails/EXTREME SQUIRTING ORGASMS & ROUGH FUCKING! the BEST SQUIRT COMPILATION on Pornhub - Mimi Cica - Pornhub.com.jpg' },
-  { path: 'src/videos/Full Video - PropertySex Horny Agent with Huge Natural Tits Makes Sex Video with Homebuyer.ts', title: 'Full Video - PropertySex Horny Agent with Huge Natural Tits Makes Sex Video with Homebuyer', thumbnail: 'src/thumbnails/Full Video - PropertySex Horny Agent with Huge Natural Tits Makes Sex Video with Homebuyer.jpg' },
-  { path: 'src/videos/I Love Watching Netflix with my Stepdad, can I Lie on your Lap. - Pornhub.com.ts', title: 'I Love Watching Netflix with my Stepdad, can I Lie on your Lap. - Pornhub.com', thumbnail: 'src/thumbnails/I Love Watching Netflix with my Stepdad, can I Lie on your Lap. - Pornhub.com.jpg' },
-  { path: 'src/videos/BANGBROS - Venezuelan Hottie La Sirena 69 is Fucking Flawless with her Big Ass and Big Tits - Pornhub.com.ts', title: 'BANGBROS - Venezuelan Hottie La Sirena 69 is Fucking Flawless with her Big Ass and Big Tits - Pornhub.com', thumbnail: 'src/thumbnails/BANGBROS - Venezuelan Hottie La Sirena 69 is Fucking Flawless with her Big Ass and Big Tits - Pornhub.com.jpg' },
-  { path: 'src/videos/Tgirl Gets Fucked in Anal while Talking to a Barmaid - Pornhub.com.ts', title: 'Tgirl Gets Fucked in Anal while Talking to a Barmaid - Pornhub.com', thumbnail: 'src/thumbnails/Tgirl Gets Fucked in Anal while Talking to a Barmaid - Pornhub.com.jpg' },
-  { path: 'src/videos/MILF Wife Creamed and Waited for her Husband. Sexy Position for Cum - Pornhub.com.ts', title: 'MILF Wife Creamed and Waited for her Husband. Sexy Position for Cum - Pornhub.com', thumbnail: 'src/thumbnails/MILF Wife Creamed and Waited for her Husband. Sexy Position for Cum - Pornhub.com.jpg' },
-  { path: 'src/videos/Watch Kenzie Taylor Drives Herself Crazy Draining BBC - Blowjob, Cowgirl, Big Tits Porn.mp4', title: 'Watch Kenzie Taylor Drives Herself Crazy Draining BBC - Blowjob, Cowgirl, Big Tits Porn', thumbnail: 'src/thumbnails/Watch Kenzie Taylor Drives Herself Crazy Draining BBC - Blowjob, Cowgirl, Big Tits Porn.jpg' },
-  { path: 'src/videos/Watch Firm torso, hot strides and a wet finish. - Bounce, Amateur, Cowgirl Porn.mp4', title: 'Watch Firm torso, hot strides and a wet finish. - Bounce, Amateur, Cowgirl Porn', thumbnail: 'src/thumbnails/Watch Firm torso, hot strides and a wet finish. - Bounce, Amateur, Cowgirl Porn.jpg' },
-  { path: 'src/videos/Watch BLACKEDRAW Gorgeous Little Blonde Dakota Lyn Gets Her Tight Pussy Filled Up - Bbc, Blonde, Facial Porn.mp4', title: 'Watch BLACKEDRAW Gorgeous Little Blonde Dakota Lyn Gets Her Tight Pussy Filled Up - Bbc, Blonde, Facial Porn', thumbnail: 'src/thumbnails/Watch BLACKEDRAW Gorgeous Little Blonde Dakota Lyn Gets Her Tight Pussy Filled Up - Bbc, Blonde, Facial Porn.jpg' },
-  { path: 'src/videos/Watch BLACKED Curvy BBC Goddess Blake Blossom Seduces Bestie\'s Man - Bbc, Doggy, Blonde Porn.mp4', title: 'Watch BLACKED Curvy BBC Goddess Blake Blossom Seduces Bestie\'s Man - Bbc, Doggy, Blonde Porn', thumbnail: 'src/thumbnails/Watch BLACKED Curvy BBC Goddess Blake Blossom Seduces Bestie\'s Man - Bbc, Doggy, Blonde Porn.jpg' },
-  { path: 'src/videos/Watch BLACKEDRAW Super Model Tiffany Tatum Cant Contain Her Excitement For BBC - Bbc, Oil, Anal Porn.mp4', title: 'Watch BLACKEDRAW Super Model Tiffany Tatum Cant Contain Her Excitement For BBC - Bbc, Oil, Anal Porn', thumbnail: 'src/thumbnails/Watch BLACKEDRAW Super Model Tiffany Tatum Cant Contain Her Excitement For BBC - Bbc, Oil, Anal Porn.jpg' },
-  { path: 'src/videos/Watch WIFEY Gorgeous Redheaded Hotwife Jessi Rae Takes Every Inch Of Jason Luv\'s BBC - Bbc, Doggy, Blowjob Porn.mp4', title: 'Watch WIFEY Gorgeous Redheaded Hotwife Jessi Rae Takes Every Inch Of Jason Luv\'s BBC - Bbc, Doggy, Blowjob Porn', thumbnail: 'src/thumbnails/Watch WIFEY Gorgeous Redheaded Hotwife Jessi Rae Takes Every Inch Of Jason Luv\'s BBC - Bbc, Doggy, Blowjob Porn.jpg' },
-  { path: 'src/videos/Watch MODERN-DAY SINS - Anal Hungry Petite Cheerleader Alexis Tae Fucks BF\'s Roommate & Stepdad - PART 1&2 - Doggy, Blowjob, Cowgirl Porn.mp4', title: 'Watch MODERN-DAY SINS - Anal Hungry Petite Cheerleader Alexis Tae Fucks BF\'s Roommate & Stepdad - PART 1&2 - Doggy, Blowjob, Cowgirl Porn', thumbnail: 'src/thumbnails/Watch MODERN-DAY SINS - Anal Hungry Petite Cheerleader Alexis Tae Fucks BF\'s Roommate & Stepdad - PART 1&2 - Doggy, Blowjob, Cowgirl Porn.jpg' },
-  { path: 'src/videos/Watch Horny babe Madison Wilde fucks big dick BF then Goes on Blind Date afterwards - S4-E4 - Pov, Doggy, Latina Porn.mp4', title: 'Watch Horny babe Madison Wilde fucks big dick BF then Goes on Blind Date afterwards - S4-E4 - Pov, Doggy, Latina Porn', thumbnail: 'src/thumbnails/Watch Horny babe Madison Wilde fucks big dick BF then Goes on Blind Date afterwards - S4-E4 - Pov, Doggy, Latina Porn.jpg' },
-  { path: 'src/videos/Watch Casca Akashova gets big dick instead of dildo. - Ass, Pussy, Blonde Porn.mp4', title: 'Watch Casca Akashova gets big dick instead of dildo. - Ass, Pussy, Blonde Porn', thumbnail: 'src/thumbnails/Watch Casca Akashova gets big dick instead of dildo. - Ass, Pussy, Blonde Porn.jpg' },
-  { path: 'src/videos/Watch VIXENPLUS Cheating MILF Brandi Love\'s First Big Black Cock - Bbc, Blonde, Facial Porn.mp4', title: 'Watch VIXENPLUS Cheating MILF Brandi Love\'s First Big Black Cock - Bbc, Blonde, Facial Porn', thumbnail: 'src/thumbnails/Watch VIXENPLUS Cheating MILF Brandi Love\'s First Big Black Cock - Bbc, Blonde, Facial Porn.jpg' },
-  { path: 'src/videos/Watch Cum - Blowjob, Cumshot, Missonary Porn.mp4', title: 'Watch Cum - Blowjob, Cumshot, Missonary Porn', thumbnail: 'src/thumbnails/Watch Cum - Blowjob, Cumshot, Missonary Porn.jpg' },
-  { path: 'src/videos/Watch Little Angel enjoys a POV hardcore fuck session - Doggy, Petite, Blowjob Porn.mp4', title: 'Watch Little Angel enjoys a POV hardcore fuck session - Doggy, Petite, Blowjob Porn', thumbnail: 'src/thumbnails/Watch Little Angel enjoys a POV hardcore fuck session - Doggy, Petite, Blowjob Porn.jpg' },
-  { path: 'src/videos/Watch Jules Jordan - Double The Latina Heat- Baby Nicols & Brandy Salazar Share Lexington Steele\'s BBC - Ffm, Babe, Latina Porn.mp4', title: 'Watch Jules Jordan - Double The Latina Heat- Baby Nicols & Brandy Salazar Share Lexington Steele\'s BBC - Ffm, Babe, Latina Porn', thumbnail: 'src/thumbnails/Watch Jules Jordan - Double The Latina Heat- Baby Nicols & Brandy Salazar Share Lexington Steele\'s BBC - Ffm, Babe, Latina Porn.jpg' },
-  { path: 'src/videos/Watch How does your ass taste on my big dick. - Ass, Anal, Babe Porn.mp4', title: 'Watch How does your ass taste on my big dick. - Ass, Anal, Babe Porn', thumbnail: 'src/thumbnails/Watch How does your ass taste on my big dick. - Ass, Anal, Babe Porn.jpg' },
-  { path: 'src/videos/Watch BigTit Brunette Sheena Ryder Tells Stepson She is Ready for Breeding Person S4-E6 - Pov, Babe, Milf Porn.mp4', title: 'Watch BigTit Brunette Sheena Ryder Tells Stepson She is Ready for Breeding Person S4-E6 - Pov, Babe, Milf Porn', thumbnail: 'src/thumbnails/Watch BigTit Brunette Sheena Ryder Tells Stepson She is Ready for Breeding Person S4-E6 - Pov, Babe, Milf Porn.jpg' },
-  { path: 'src/videos/Watch LET ME PLEASE THAT COCK - LEXIS STAR - Babe, Milf, Bigass Porn.mp4', title: 'Watch LET ME PLEASE THAT COCK - LEXIS STAR - Babe, Milf, Bigass Porn', thumbnail: 'src/thumbnails/Watch LET ME PLEASE THAT COCK - LEXIS STAR - Babe, Milf, Bigass Porn.jpg' },
-  { path: 'src/videos/Watch XXXmas Deliver-Ohh! - Doggy, Blonde, Big Ass Porn.mp4', title: 'Watch XXXmas Deliver-Ohh! - Doggy, Blonde, Big Ass Porn', thumbnail: 'src/thumbnails/Watch XXXmas Deliver-Ohh! - Doggy, Blonde, Big Ass Porn.jpg' },
-  { path: 'src/videos/Watch Bed for three - Bbc, Ffm, Teen Porn.mp4', title: 'Watch Bed for three - Bbc, Ffm, Teen Porn', thumbnail: 'src/thumbnails/Watch Bed for three - Bbc, Ffm, Teen Porn.jpg' },
-  { path: 'src/videos/Watch FAMILYXXX - Luscious Big Tits Stepmom Let\'s it All Flow (Becky Bandini) - Mom, Milf, Doggy Porn.mp4', title: 'Watch FAMILYXXX - Luscious Big Tits Stepmom Let\'s it All Flow (Becky Bandini) - Mom, Milf, Doggy Porn', thumbnail: 'src/thumbnails/Watch FAMILYXXX - Luscious Big Tits Stepmom Let\'s it All Flow (Becky Bandini) - Mom, Milf, Doggy Porn.jpg' },
-  { path: 'src/videos/Watch VIXENPLUS Wife Lies To Husband To Hook Up with BBC - Bbc, Doggy, Riding Porn.mp4', title: 'Watch VIXENPLUS Wife Lies To Husband To Hook Up with BBC - Bbc, Doggy, Riding Porn', thumbnail: 'src/thumbnails/Watch VIXENPLUS Wife Lies To Husband To Hook Up with BBC - Bbc, Doggy, Riding Porn.jpg' },
-  { path: 'src/videos/Watch Hot MILF Rachael Cavalli gets dicked down by boyfriend\'s son - Milf, Doggy, Pussy Porn.mp4', title: 'Watch Hot MILF Rachael Cavalli gets dicked down by boyfriend\'s son - Milf, Doggy, Pussy Porn', thumbnail: 'src/thumbnails/Watch Hot MILF Rachael Cavalli gets dicked down by boyfriend\'s son - Milf, Doggy, Pussy Porn.jpg' },
-  { path: 'src/videos/Watch BLACKED Petite Blonde Baddies Kelly Collins And Nata Gold Share BBC - Bbc, Ffm, Blonde Porn.mp4', title: 'Watch BLACKED Petite Blonde Baddies Kelly Collins And Nata Gold Share BBC - Bbc, Ffm, Blonde Porn', thumbnail: 'src/thumbnails/Watch BLACKED Petite Blonde Baddies Kelly Collins And Nata Gold Share BBC - Bbc, Ffm, Blonde Porn.jpg' }
+  { path: 'src/videos/Azeri Gelin Otelde Amcini Sikib Agzina Spermani Bosalir - Pornhub.com.mp4', title: 'Azeri Gelin Otelde Amcini Sikib Agzina Spermani Bosalir - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Azeri Gelin Otelde Amcini Sikib Agzina Spermani Bosalir - Pornhub.com.jpg' },
+  { path: 'src/videos/BANGBROS - Venezuelan Hottie La Sirena 69 is Fucking Flawless with her Big Ass and Big Tits - Pornhub.com.mp4', title: 'BANGBROS - Venezuelan Hottie La Sirena 69 is Fucking Flawless with her Big Ass and Big Tits - Pornhub.com.mp4', thumbnail: 'src/thumbnails/BANGBROS - Venezuelan Hottie La Sirena 69 is Fucking Flawless with her Big Ass and Big Tits - Pornhub.com.jpg' },
+  { path: 'src/videos/EXTREME SQUIRT - she Orgasms so Hard, she almost Hit the Ceiling! - Pornhub.com.mp4', title: 'EXTREME SQUIRT - she Orgasms so Hard, she almost Hit the Ceiling! - Pornhub.com.mp4', thumbnail: 'src/thumbnails/EXTREME SQUIRT - she Orgasms so Hard, she almost Hit the Ceiling! - Pornhub.com.jpg' },
+  { path: 'src/videos/EXTREME SQUIRTING ORGASMS & ROUGH FUCKING! the BEST SQUIRT COMPILATION on Pornhub - Mimi Cica - Pornhub.com.mp4', title: 'EXTREME SQUIRTING ORGASMS & ROUGH FUCKING! the BEST SQUIRT COMPILATION on Pornhub - Mimi Cica - Pornhub.com.mp4', thumbnail: 'src/thumbnails/EXTREME SQUIRTING ORGASMS & ROUGH FUCKING! the BEST SQUIRT COMPILATION on Pornhub - Mimi Cica - Pornhub.com.jpg' },
+  { path: 'src/videos/EXTREME SQUIRT Intense Fucking TEEN makes her Cum Hard - Pornhub.com.mp4', title: 'EXTREME SQUIRT Intense Fucking TEEN makes her Cum Hard - Pornhub.com.mp4', thumbnail: 'src/thumbnails/EXTREME SQUIRT Intense Fucking TEEN makes her Cum Hard - Pornhub.com.jpg' },
+  { path: 'src/videos/Femme Arab En Hijab Baise Comme Une Salope . Beurette Amateur Voilee Squirt - Pornhub.com.mp4', title: 'Femme Arab En Hijab Baise Comme Une Salope . Beurette Amateur Voilee Squirt - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Femme Arab En Hijab Baise Comme Une Salope . Beurette Amateur Voilee Squirt - Pornhub.com.jpg' },
+  { path: 'src/videos/Full Video - New Sensations - Quinn Wilde Always Wants it Rough and Hard.mp4', title: 'Full Video - New Sensations - Quinn Wilde Always Wants it Rough and Hard.mp4', thumbnail: 'src/thumbnails/Full Video - New Sensations - Quinn Wilde Always Wants it Rough and Hard.jpg' },
+  { path: 'src/videos/Full Video - PropertySex Horny Agent with Huge Natural Tits Makes Sex Video with Homebuyer.mp4', title: 'Full Video - PropertySex Horny Agent with Huge Natural Tits Makes Sex Video with Homebuyer.mp4', thumbnail: 'src/thumbnails/Full Video - PropertySex Horny Agent with Huge Natural Tits Makes Sex Video with Homebuyer.jpg' },
+  { path: 'src/videos/Full Video - The best of hot Arabic MILF Sasha Pearl.mp4', title: 'Full Video - The best of hot Arabic MILF Sasha Pearl.mp4', thumbnail: 'src/thumbnails/Full Video - The best of hot Arabic MILF Sasha Pearl.jpg' },
+  { path: 'src/videos/Hijab Muslim Babe Gets Roughly Dominated - Pornhub.com.mp4', title: 'Hijab Muslim Babe Gets Roughly Dominated - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Hijab Muslim Babe Gets Roughly Dominated - Pornhub.com.jpg' },
+  { path: 'src/videos/I go to my Stepsisters Sauna and Fuck her Hard Alone - Pornhub.com.mp4', title: 'I go to my Stepsisters Sauna and Fuck her Hard Alone - Pornhub.com.mp4', thumbnail: 'src/thumbnails/I go to my Stepsisters Sauna and Fuck her Hard Alone - Pornhub.com.jpg' },
+  { path: 'src/videos/I Love Watching Netflix with my Stepdad can I Lie on your Lap - Pornhub.com.mp4', title: 'I Love Watching Netflix with my Stepdad can I Lie on your Lap - Pornhub.com.mp4', thumbnail: 'src/thumbnails/I Love Watching Netflix with my Stepdad can I Lie on your Lap - Pornhub.com.jpg' },
+  { path: 'src/videos/Jamaican Cheating Wife Craving for some Arab Cum - Pornhub.com.mp4', title: 'Jamaican Cheating Wife Craving for some Arab Cum - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Jamaican Cheating Wife Craving for some Arab Cum - Pornhub.com.jpg' },
+  { path: 'src/videos/MIA KHALIFA - Busty Arab Babe taking Dick from White Man with Big Cock - Pornhub.com.mp4', title: 'MIA KHALIFA - Busty Arab Babe taking Dick from White Man with Big Cock - Pornhub.com.mp4', thumbnail: 'src/thumbnails/MIA KHALIFA - Busty Arab Babe taking Dick from White Man with Big Cock - Pornhub.com.jpg' },
+  { path: 'src/videos/MIA KHALIFA - Mia Loves to Share Big Dick with her Stepmom or a Friend - Pornhub.com.mp4', title: 'MIA KHALIFA - Mia Loves to Share Big Dick with her Stepmom or a Friend - Pornhub.com.mp4', thumbnail: 'src/thumbnails/MIA KHALIFA - Mia Loves to Share Big Dick with her Stepmom or a Friend - Pornhub.com.jpg' },
+  { path: 'src/videos/MILF Wife Creamed and Waited for her Husband Sexy Position for Cum - Pornhub.com.mp4', title: 'MILF Wife Creamed and Waited for her Husband Sexy Position for Cum - Pornhub.com.mp4', thumbnail: 'src/thumbnails/MILF Wife Creamed and Waited for her Husband Sexy Position for Cum - Pornhub.com.jpg' },
+  { path: 'src/videos/Missionary SQUUUIRTING Compilation - Pornhub.com.mp4', title: 'Missionary SQUUUIRTING Compilation - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Missionary SQUUUIRTING Compilation - Pornhub.com.jpg' },
+  { path: 'src/videos/Muslim Wife Sex Tape - Pornhub.com.mp4', title: 'Muslim Wife Sex Tape - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Muslim Wife Sex Tape - Pornhub.com.jpg' },
+  { path: 'src/videos/My Sisters Hot Big Titty Horny best Friend Catches me Jerking off to her in the Shower - Pornhub.com.mp4', title: 'My Sisters Hot Big Titty Horny best Friend Catches me Jerking off to her in the Shower - Pornhub.com.mp4', thumbnail: 'src/thumbnails/My Sisters Hot Big Titty Horny best Friend Catches me Jerking off to her in the Shower - Pornhub.com.jpg' },
+  { path: 'src/videos/Saudi Barbienjd getting Piped down by a BBC - Pornhub.com.mp4', title: 'Saudi Barbienjd getting Piped down by a BBC - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Saudi Barbienjd getting Piped down by a BBC - Pornhub.com.jpg' },
+  { path: 'src/videos/Sexy 18yo BABE Stays for Passionate Fucking Gets first EXTREME SQUIRT - Pornhub.com.mp4', title: 'Sexy 18yo BABE Stays for Passionate Fucking Gets first EXTREME SQUIRT - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Sexy 18yo BABE Stays for Passionate Fucking Gets first EXTREME SQUIRT - Pornhub.com.jpg' },
+  { path: 'src/videos/Tgirl Gets Fucked in Anal while Talking to a Barmaid - Pornhub.com.mp4', title: 'Tgirl Gets Fucked in Anal while Talking to a Barmaid - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Tgirl Gets Fucked in Anal while Talking to a Barmaid - Pornhub.com.jpg' },
+  { path: 'src/videos/Watch Bed for three - Bbc Ffm Teen Porn.mp4', title: 'Watch Bed for three - Bbc Ffm Teen Porn.mp4', thumbnail: 'src/thumbnails/Watch Bed for three - Bbc Ffm Teen Porn.jpg' },
+  { path: 'src/videos/Watch BigTit Brunette Sheena Ryder Tells Stepson She is Ready for Breeding Person S4-E6 - Pov Babe Milf Porn.mp4', title: 'Watch BigTit Brunette Sheena Ryder Tells Stepson She is Ready for Breeding Person S4-E6 - Pov Babe Milf Porn.mp4', thumbnail: 'src/thumbnails/Watch BigTit Brunette Sheena Ryder Tells Stepson She is Ready for Breeding Person S4-E6 - Pov Babe Milf Porn.jpg' },
+  { path: 'src/videos/Watch BLACKED Curvy BBC Goddess Blake Blossom Seduces Besties Man - Bbc Doggy Blonde Porn.mp4', title: 'Watch BLACKED Curvy BBC Goddess Blake Blossom Seduces Besties Man - Bbc Doggy Blonde Porn.mp4', thumbnail: 'src/thumbnails/Watch BLACKED Curvy BBC Goddess Blake Blossom Seduces Besties Man - Bbc Doggy Blonde Porn.jpg' },
+  { path: 'src/videos/Watch BLACKED Petite Blonde Baddies Kelly Collins And Nata Gold Share BBC - Bbc Ffm Blonde Porn.mp4', title: 'Watch BLACKED Petite Blonde Baddies Kelly Collins And Nata Gold Share BBC - Bbc Ffm Blonde Porn.mp4', thumbnail: 'src/thumbnails/Watch BLACKED Petite Blonde Baddies Kelly Collins And Nata Gold Share BBC - Bbc Ffm Blonde Porn.jpg' },
+  { path: 'src/videos/Watch BLACKEDRAW Gorgeous Little Blonde Dakota Lyn Gets Her Tight Pussy Filled Up - Bbc Blonde Facial Porn.mp4', title: 'Watch BLACKEDRAW Gorgeous Little Blonde Dakota Lyn Gets Her Tight Pussy Filled Up - Bbc Blonde Facial Porn.mp4', thumbnail: 'src/thumbnails/Watch BLACKEDRAW Gorgeous Little Blonde Dakota Lyn Gets Her Tight Pussy Filled Up - Bbc Blonde Facial Porn.jpg' },
+  { path: 'src/videos/Watch BLACKEDRAW Super Model Tiffany Tatum Cant Contain Her Excitement For BBC - Bbc Oil Anal Porn.mp4', title: 'Watch BLACKEDRAW Super Model Tiffany Tatum Cant Contain Her Excitement For BBC - Bbc Oil Anal Porn.mp4', thumbnail: 'src/thumbnails/Watch BLACKEDRAW Super Model Tiffany Tatum Cant Contain Her Excitement For BBC - Bbc Oil Anal Porn.jpg' },
+  { path: 'src/videos/Watch Casca Akashova gets big dick instead of dildo - Ass Pussy Blonde Porn.mp4', title: 'Watch Casca Akashova gets big dick instead of dildo - Ass Pussy Blonde Porn.mp4', thumbnail: 'src/thumbnails/Watch Casca Akashova gets big dick instead of dildo - Ass Pussy Blonde Porn.jpg' },
+  { path: 'src/videos/Watch Cum - Blowjob Cumshot Missonary Porn.mp4', title: 'Watch Cum - Blowjob Cumshot Missonary Porn.mp4', thumbnail: 'src/thumbnails/Watch Cum - Blowjob Cumshot Missonary Porn.jpg' },
+  { path: 'src/videos/Watch FAMILYXXX - Luscious Big Tits Stepmom Lets it All Flow Becky Bandini - Mom Milf Doggy Porn.mp4', title: 'Watch FAMILYXXX - Luscious Big Tits Stepmom Lets it All Flow Becky Bandini - Mom Milf Doggy Porn.mp4', thumbnail: 'src/thumbnails/Watch FAMILYXXX - Luscious Big Tits Stepmom Lets it All Flow Becky Bandini - Mom Milf Doggy Porn.jpg' },
+  { path: 'src/videos/Watch Firm torso hot strides and a wet finish - Bounce Amateur Cowgirl Porn.mp4', title: 'Watch Firm torso hot strides and a wet finish - Bounce Amateur Cowgirl Porn.mp4', thumbnail: 'src/thumbnails/Watch Firm torso hot strides and a wet finish - Bounce Amateur Cowgirl Porn.jpg' },
+  { path: 'src/videos/Watch Horny babe Madison Wilde fucks big dick BF then Goes on Blind Date afterwards S4-E4 - Pov Doggy Latina Porn.mp4', title: 'Watch Horny babe Madison Wilde fucks big dick BF then Goes on Blind Date afterwards S4-E4 - Pov Doggy Latina Porn.mp4', thumbnail: 'src/thumbnails/Watch Horny babe Madison Wilde fucks big dick BF then Goes on Blind Date afterwards S4-E4 - Pov Doggy Latina Porn.jpg' },
+  { path: 'src/videos/Watch Hot MILF Rachael Cavalli gets dicked down by boyfriends son - Milf Doggy Pussy Porn.mp4', title: 'Watch Hot MILF Rachael Cavalli gets dicked down by boyfriends son - Milf Doggy Pussy Porn.mp4', thumbnail: 'src/thumbnails/Watch Hot MILF Rachael Cavalli gets dicked down by boyfriends son - Milf Doggy Pussy Porn.jpg' },
+  { path: 'src/videos/Watch How does your ass taste on my big dick - Ass Anal Babe Porn.mp4', title: 'Watch How does your ass taste on my big dick - Ass Anal Babe Porn.mp4', thumbnail: 'src/thumbnails/Watch How does your ass taste on my big dick - Ass Anal Babe Porn.jpg' },
+  { path: 'src/videos/Watch Jules Jordan - Double The Latina Heat Baby Nicols Brandy Salazar Share Lexington Steeles BBC - Ffm Babe Latina Porn.mp4', title: 'Watch Jules Jordan - Double The Latina Heat Baby Nicols Brandy Salazar Share Lexington Steeles BBC - Ffm Babe Latina Porn.mp4', thumbnail: 'src/thumbnails/Watch Jules Jordan - Double The Latina Heat Baby Nicols Brandy Salazar Share Lexington Steeles BBC - Ffm Babe Latina Porn.jpg' },
+  { path: 'src/videos/Watch Kenzie Taylor Drives Herself Crazy Draining BBC - Blowjob Cowgirl Big Tits Porn.mp4', title: 'Watch Kenzie Taylor Drives Herself Crazy Draining BBC - Blowjob Cowgirl Big Tits Porn.mp4', thumbnail: 'src/thumbnails/Watch Kenzie Taylor Drives Herself Crazy Draining BBC - Blowjob Cowgirl Big Tits Porn.jpg' },
+  { path: 'src/videos/Watch LET ME PLEASE THAT COCK - LEXIS STAR - Babe Milf Bigass Porn.mp4', title: 'Watch LET ME PLEASE THAT COCK - LEXIS STAR - Babe Milf Bigass Porn.mp4', thumbnail: 'src/thumbnails/Watch LET ME PLEASE THAT COCK - LEXIS STAR - Babe Milf Bigass Porn.jpg' },
+  { path: 'src/videos/Watch Little Angel enjoys a POV hardcore fuck session - Doggy Petite Blowjob Porn.mp4', title: 'Watch Little Angel enjoys a POV hardcore fuck session - Doggy Petite Blowjob Porn.mp4', thumbnail: 'src/thumbnails/Watch Little Angel enjoys a POV hardcore fuck session - Doggy Petite Blowjob Porn.jpg' },
+  { path: 'src/videos/Watch MODERN-DAY SINS - Anal Hungry Petite Cheerleader Alexis Tae Fucks BFs Roommate Stepdad PART 1&2 - Doggy Blowjob Cowgirl Porn.mp4', title: 'Watch MODERN-DAY SINS - Anal Hungry Petite Cheerleader Alexis Tae Fucks BFs Roommate Stepdad PART 1&2 - Doggy Blowjob Cowgirl Porn.mp4', thumbnail: 'src/thumbnails/Watch MODERN-DAY SINS - Anal Hungry Petite Cheerleader Alexis Tae Fucks BFs Roommate Stepdad PART 1&2 - Doggy Blowjob Cowgirl Porn.jpg' },
+  { path: 'src/videos/Watch VIXENPLUS Cheating MILF Brandi Loves First Big Black Cock - Bbc Blonde Facial Porn.mp4', title: 'Watch VIXENPLUS Cheating MILF Brandi Loves First Big Black Cock - Bbc Blonde Facial Porn.mp4', thumbnail: 'src/thumbnails/Watch VIXENPLUS Cheating MILF Brandi Loves First Big Black Cock - Bbc Blonde Facial Porn.jpg' },
+  { path: 'src/videos/Watch VIXENPLUS Wife Lies To Husband To Hook Up with BBC - Bbc Doggy Riding Porn.mp4', title: 'Watch VIXENPLUS Wife Lies To Husband To Hook Up with BBC - Bbc Doggy Riding Porn.mp4', thumbnail: 'src/thumbnails/Watch VIXENPLUS Wife Lies To Husband To Hook Up with BBC - Bbc Doggy Riding Porn.jpg' },
+  { path: 'src/videos/Watch WIFEY Gorgeous Redheaded Hotwife Jessi Rae Takes Every Inch Of Jason Luvs BBC - Bbc Doggy Blowjob Porn.mp4', title: 'Watch WIFEY Gorgeous Redheaded Hotwife Jessi Rae Takes Every Inch Of Jason Luvs BBC - Bbc Doggy Blowjob Porn.mp4', thumbnail: 'src/thumbnails/Watch WIFEY Gorgeous Redheaded Hotwife Jessi Rae Takes Every Inch Of Jason Luvs BBC - Bbc Doggy Blowjob Porn.jpg' },
+  { path: 'src/videos/Watch XXXmas Deliver-Ohh - Doggy Blonde Big Ass Porn.mp4', title: 'Watch XXXmas Deliver-Ohh - Doggy Blonde Big Ass Porn.mp4', thumbnail: 'src/thumbnails/Watch XXXmas Deliver-Ohh - Doggy Blonde Big Ass Porn.jpg' },
+  { path: 'src/videos/Sex Marocain - Pornhub.com.mp4', title: 'Sex Marocain - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Sex Marocain - Pornhub.com.jpg' },
+  { path: 'src/videos/Teacher and Student - Pornhub.com.mp4', title: 'Teacher and Student - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Teacher and Student - Pornhub.com.jpg' },
+  { path: 'src/videos/Step Mom Story - Pornhub.com.mp4', title: 'Step Mom Story - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Step Mom Story - Pornhub.com.jpg' },
+  { path: 'src/videos/Step Sister Story - Pornhub.com.mp4', title: 'Step Sister Story - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Step Sister Story - Pornhub.com.jpg' },
+  { path: 'src/videos/Egyptian Wife Story - Pornhub.com.mp4', title: 'Egyptian Wife Story - Pornhub.com.mp4', thumbnail: 'src/thumbnails/Egyptian Wife Story - Pornhub.com.jpg' }
 ];
 
 // --- END AUTO-GENERATED VIDEO ARRAY ---
@@ -764,7 +763,8 @@ function openVideoModal(video) {
     window.enhancedPlayer = new VideoPlayer({
       videoElement: vidEl,
       autoplay: false,
-      controls: true
+      controls: true,
+      muted: false
     });
   }
 
@@ -801,6 +801,12 @@ function openVideoModal(video) {
 
   // Encode only the filename part to preserve the directory structure
   const encodedPath = directory + encodeURIComponent(filename);
+
+  // Set the video title
+  title.textContent = video.title || baseName;
+
+  // Log the video source for debugging
+  console.log('Video source:', encodedPath);
 
   // Use our enhanced video player to load the video
   window.enhancedPlayer.loadVideo(encodedPath, video.title || baseName, (errorMessage, fileExt) => {
@@ -878,162 +884,6 @@ function openVideoModal(video) {
     }
   }, 1000);
 
-  // For better compatibility, try to add alternative formats
-  // Only add these as fallbacks, not as primary sources
-  const formats = ['mp4', 'ts', 'webm'];
-
-  // Check if the video exists in the videos array
-  const videoExists = videos.some(v => v.path === video.path);
-
-  if (!videoExists) {
-    console.warn(`Video not found in database: ${video.path}`);
-    // Remove loading message
-    controls.innerHTML = '';
-    controls.appendChild(createErrorOverlay('Video not found in the database.'));
-
-    // Try to show a thumbnail instead
-    if (video.thumbnail) {
-      const fallbackImg = document.createElement('img');
-
-      // Make sure the path is relative (remove leading slash if present)
-      let thumbPath = video.thumbnail;
-      if (thumbPath.startsWith('/')) {
-        thumbPath = thumbPath.substring(1);
-      }
-
-      // Properly encode the thumbnail path to handle spaces and special characters
-      // Split the path into directory and filename parts
-      const lastSlashIndex = thumbPath.lastIndexOf('/');
-      const directory = thumbPath.substring(0, lastSlashIndex + 1);
-      const filename = thumbPath.substring(lastSlashIndex + 1);
-
-      // Encode only the filename part to preserve the directory structure
-      const encodedThumbPath = directory + encodeURIComponent(filename);
-      fallbackImg.src = encodedThumbPath;
-
-      fallbackImg.alt = video.title || 'Video thumbnail';
-      fallbackImg.style.maxWidth = '100%';
-      fallbackImg.style.maxHeight = '400px';
-      fallbackImg.style.display = 'block';
-      fallbackImg.style.margin = '20px auto';
-      fallbackImg.onerror = () => {
-        fallbackImg.src = 'src/images/video-fallback.jpg';
-      };
-      controls.appendChild(fallbackImg);
-    } else {
-      // If no thumbnail, show fallback image
-      const fallbackImg = document.createElement('img');
-      fallbackImg.src = 'src/images/video-fallback.jpg';
-      fallbackImg.alt = 'Video thumbnail';
-      fallbackImg.style.maxWidth = '100%';
-      fallbackImg.style.maxHeight = '400px';
-      fallbackImg.style.display = 'block';
-      fallbackImg.style.margin = '20px auto';
-      controls.appendChild(fallbackImg);
-    }
-    return;
-  }
-
-  // Remove loading message once we know the video exists
-  controls.innerHTML = '';
-
-  // Add alternative formats as fallbacks
-  formats.forEach(format => {
-    // Skip the format that matches the original video
-    if (format === ext) return;
-
-    // Check if this format exists in the videos array
-    const formatExists = videos.some(v =>
-      v.path === `src/videos/${baseName}.${format}`
-    );
-
-    if (formatExists) {
-      // Ensure path is relative (no leading slash)
-      const formatPath = `src/videos/${baseName}.${format}`;
-
-      // Properly encode the path to handle special characters
-      // Split the path into directory and filename parts
-      const lastSlashIndex = formatPath.lastIndexOf('/');
-      const directory = formatPath.substring(0, lastSlashIndex + 1);
-      const filename = formatPath.substring(lastSlashIndex + 1);
-
-      // Encode only the filename part to preserve the directory structure
-      const encodedFormatPath = directory + encodeURIComponent(filename);
-
-      // If this is a .ts format, add multiple MIME types
-      if (format === 'ts') {
-        tsMimeTypes.forEach(mimeType => {
-          const source = document.createElement('source');
-          source.src = encodedFormatPath;
-          source.type = mimeType;
-          vidEl.appendChild(source);
-        });
-        console.log(`Added alternative format with multiple MIME types: ${formatPath}`);
-      } else {
-        // For other formats, just use the standard MIME type
-        const formatSrc = document.createElement('source');
-        formatSrc.src = encodedFormatPath;
-        formatSrc.type = mimeTypes[format];
-        vidEl.appendChild(formatSrc);
-        console.log(`Added alternative format: ${formatPath}`);
-      }
-    }
-  });
-
-  // Captions (if .vtt file with same base name exists in videos array)
-  const caption = videos.find(m => m.type === 'caption' && m.path.split('/').pop().startsWith(baseName));
-  if (caption) {
-    const track = document.createElement('track');
-    track.kind = 'subtitles';
-    track.label = 'English';
-    track.srclang = 'en';
-
-    // Make sure the path is relative (remove leading slash if present)
-    let captionPath = caption.path;
-    if (captionPath.startsWith('/')) {
-      captionPath = captionPath.substring(1);
-    }
-
-    // Properly encode the caption path to handle spaces and special characters
-    // Split the path into directory and filename parts
-    const lastSlashIndex = captionPath.lastIndexOf('/');
-    const directory = captionPath.substring(0, lastSlashIndex + 1);
-    const filename = captionPath.substring(lastSlashIndex + 1);
-
-    // Encode only the filename part to preserve the directory structure
-    const encodedCaptionPath = directory + encodeURIComponent(filename);
-    track.src = encodedCaptionPath;
-
-    track.default = true;
-    vidEl.appendChild(track);
-    console.log(`Added caption track: ${track.src}`);
-  }
-
-  // Load the video with the sources we've added
-  vidEl.load();
-  title.textContent = video.title || video.path;
-
-  // Add a direct fallback mechanism - if the video doesn't start loading within 3 seconds,
-  // try setting the src attribute directly on the video element
-  setTimeout(() => {
-    if (vidEl.readyState === 0) { // HAVE_NOTHING - no data available
-      console.log('Video not loading with source elements, trying direct src attribute');
-      // Clear existing sources
-      while (vidEl.firstChild) {
-        if (vidEl.firstChild.tagName === 'SOURCE') {
-          vidEl.removeChild(vidEl.firstChild);
-        } else {
-          break;
-        }
-      }
-
-      // Set src directly on video element using the properly encoded path
-      vidEl.src = encodedPath; // Use the already properly encoded path
-      vidEl.load();
-      vidEl.play().catch(e => console.log('Error playing video:', e));
-    }
-  }, 3000);
-
   // Show duration and current time
   vidEl.ontimeupdate = () => {
     duration.textContent = `${formatTime(vidEl.currentTime)} / ${formatTime(vidEl.duration)}`;
@@ -1073,231 +923,7 @@ function openVideoModal(video) {
     };
 
     controls.appendChild(playButton);
-
-    // Add a download link as a fallback option
-    const downloadContainer = document.createElement('div');
-    downloadContainer.style.textAlign = 'center';
-    downloadContainer.style.margin = '15px auto';
-    downloadContainer.style.padding = '10px';
-    downloadContainer.style.backgroundColor = 'rgba(0,0,0,0.2)';
-    downloadContainer.style.borderRadius = '5px';
-
-    const downloadText = document.createElement('p');
-    downloadText.textContent = 'If streaming doesn\'t work, download the video:';
-    downloadText.style.margin = '0 0 10px 0';
-    downloadText.style.color = 'white';
-
-    const downloadLink = document.createElement('a');
-    downloadLink.href = encodedPath;
-    downloadLink.download = baseName + '.' + ext;
-    downloadLink.textContent = 'Download Video to Play Locally';
-    downloadLink.style.display = 'inline-block';
-    downloadLink.style.padding = '8px 15px';
-    downloadLink.style.backgroundColor = '#D4AF37';
-    downloadLink.style.color = 'black';
-    downloadLink.style.textDecoration = 'none';
-    downloadLink.style.borderRadius = '5px';
-    downloadLink.style.fontWeight = 'bold';
-
-    downloadContainer.appendChild(downloadText);
-    downloadContainer.appendChild(downloadLink);
-    controls.appendChild(downloadContainer);
-
-    // Check if MP4 version exists and offer it as an alternative
-    const mp4Path = `src/videos/${baseName}.mp4`;
-    const mp4Exists = videos.some(v => v.path === mp4Path);
-
-    if (mp4Exists) {
-      const mp4Option = document.createElement('div');
-      mp4Option.style.textAlign = 'center';
-      mp4Option.style.margin = '10px auto';
-
-      const mp4Link = document.createElement('button');
-      mp4Link.textContent = 'Try MP4 Version Instead';
-      mp4Link.style.padding = '8px 15px';
-      mp4Link.style.backgroundColor = '#4CAF50';
-      mp4Link.style.color = 'white';
-      mp4Link.style.border = 'none';
-      mp4Link.style.borderRadius = '5px';
-      mp4Link.style.cursor = 'pointer';
-
-      mp4Link.onclick = () => {
-        // Find the MP4 version in the videos array
-        const mp4Video = videos.find(v => v.path === mp4Path);
-        if (mp4Video) {
-          openVideoModal(mp4Video);
-        }
-      };
-
-      mp4Option.appendChild(mp4Link);
-      controls.appendChild(mp4Option);
-    }
-  } else if (ext === 'mkv' || ext === 'avi' || ext === 'wmv') {
-    // Add a message about less-supported formats
-    const formatNote = document.createElement('div');
-    formatNote.textContent = `Note: This video is in ${ext.toUpperCase()} format, which may have limited browser support. Our enhanced player will attempt to play it, but you may need to download it for local playback.`;
-    formatNote.style.backgroundColor = 'rgba(255,255,0,0.2)';
-    formatNote.style.padding = '10px';
-    formatNote.style.marginTop = '10px';
-    formatNote.style.borderRadius = '5px';
-    controls.appendChild(formatNote);
-
-    // Add a download link
-    const downloadLink = document.createElement('a');
-    downloadLink.href = encodedPath;
-    downloadLink.download = baseName + '.' + ext;
-    downloadLink.textContent = 'Download Video to Play Locally';
-    downloadLink.style.display = 'block';
-    downloadLink.style.margin = '10px auto';
-    downloadLink.style.padding = '8px 15px';
-    downloadLink.style.backgroundColor = '#D4AF37';
-    downloadLink.style.color = 'black';
-    downloadLink.style.textDecoration = 'none';
-    downloadLink.style.borderRadius = '5px';
-    downloadLink.style.fontWeight = 'bold';
-    downloadLink.style.textAlign = 'center';
-    downloadLink.style.maxWidth = '250px';
-
-    controls.appendChild(downloadLink);
   }
-
-  // Comprehensive error handling
-  vidEl.onerror = (e) => {
-    console.log('Video error:', e);
-    // Clear any previous error messages
-    const existingErrors = controls.querySelectorAll('.media-error-overlay');
-    existingErrors.forEach(el => el.remove());
-
-    // Get detailed error information
-    let errorMsg = 'Video failed to load. ';
-
-    if (vidEl.error) {
-      console.error('Video error code:', vidEl.error.code);
-      switch (vidEl.error.code) {
-        case 1:
-          errorMsg += 'The video playback was aborted.';
-          break;
-        case 2:
-          errorMsg += 'A network error occurred. Check your internet connection.';
-          break;
-        case 3:
-          errorMsg += 'The video format is not supported by your browser.';
-          break;
-        case 4:
-          errorMsg += 'The video file was not found or is in an unsupported format.';
-          break;
-        default:
-          if (ext === 'ts') {
-            errorMsg += 'This .ts file format may not be supported by your browser. Try using Chrome or Edge, or check if the file exists.';
-          } else {
-            errorMsg += 'The file may not exist or may be in an unsupported format.';
-          }
-      }
-    } else {
-      if (ext === 'ts') {
-        errorMsg += 'This .ts file format may not be supported by your browser. Try using Chrome or Edge, or check if the file exists.';
-      } else {
-        errorMsg += 'The file may not exist or may be in an unsupported format.';
-      }
-    }
-
-    // Create a more detailed error overlay
-    const errorOverlay = document.createElement('div');
-    errorOverlay.className = 'media-error-overlay';
-    errorOverlay.style.position = 'absolute';
-    errorOverlay.style.top = '0';
-    errorOverlay.style.left = '0';
-    errorOverlay.style.width = '100%';
-    errorOverlay.style.height = '100%';
-    errorOverlay.style.backgroundColor = 'rgba(0,0,0,0.8)';
-    errorOverlay.style.color = 'white';
-    errorOverlay.style.display = 'flex';
-    errorOverlay.style.flexDirection = 'column';
-    errorOverlay.style.justifyContent = 'center';
-    errorOverlay.style.alignItems = 'center';
-    errorOverlay.style.padding = '20px';
-    errorOverlay.style.textAlign = 'center';
-    errorOverlay.style.zIndex = '10';
-
-    // Error message
-    const errorText = document.createElement('div');
-    errorText.textContent = errorMsg;
-    errorText.style.fontSize = '16px';
-    errorText.style.marginBottom = '20px';
-    errorOverlay.appendChild(errorText);
-
-    // Add download button
-    const downloadBtn = document.createElement('a');
-    downloadBtn.href = encodedPath; // Use the already properly encoded path
-    downloadBtn.download = '';
-    downloadBtn.textContent = '⬇️ Download Video';
-    downloadBtn.style.padding = '10px 20px';
-    downloadBtn.style.backgroundColor = '#D4AF37';
-    downloadBtn.style.color = 'black';
-    downloadBtn.style.textDecoration = 'none';
-    downloadBtn.style.borderRadius = '5px';
-    downloadBtn.style.fontWeight = 'bold';
-    downloadBtn.style.margin = '10px 0';
-    errorOverlay.appendChild(downloadBtn);
-
-    // Add retry button
-    const retryBtn = document.createElement('button');
-    retryBtn.textContent = '🔄 Retry';
-    retryBtn.style.padding = '10px 20px';
-    retryBtn.style.backgroundColor = '#4CAF50';
-    retryBtn.style.color = 'white';
-    retryBtn.style.border = 'none';
-    retryBtn.style.borderRadius = '5px';
-    retryBtn.style.cursor = 'pointer';
-    retryBtn.style.margin = '10px 0';
-    retryBtn.onclick = function() {
-      // Remove error overlay
-      if (errorOverlay.parentNode) {
-        errorOverlay.parentNode.removeChild(errorOverlay);
-      }
-
-      // Reload video
-      vidEl.load();
-      vidEl.play().catch(e => console.error('Error playing video after retry:', e));
-    };
-    errorOverlay.appendChild(retryBtn);
-
-    // Add to video container
-    controls.appendChild(errorOverlay);
-
-    // Try to show a thumbnail instead
-    if (video.thumbnail) {
-      const fallbackImg = document.createElement('img');
-
-      // Make sure the path is relative (remove leading slash if present)
-      let thumbPath = video.thumbnail;
-      if (thumbPath.startsWith('/')) {
-        thumbPath = thumbPath.substring(1);
-      }
-      // Encode the thumbnail path to handle spaces and special characters
-      fallbackImg.src = encodeURI(thumbPath);
-
-      fallbackImg.alt = video.title || 'Video thumbnail';
-      fallbackImg.style.maxWidth = '100%';
-      fallbackImg.style.maxHeight = '400px';
-      fallbackImg.style.display = 'block';
-      fallbackImg.style.margin = '20px auto';
-      fallbackImg.onerror = () => {
-        fallbackImg.src = 'src/images/video-fallback.jpg';
-      };
-      controls.appendChild(fallbackImg);
-    } else {
-      // If no thumbnail, show fallback image
-      const fallbackImg = document.createElement('img');
-      fallbackImg.src = 'src/images/video-fallback.jpg';
-      fallbackImg.alt = 'Video thumbnail';
-      fallbackImg.style.maxWidth = '100%';
-      fallbackImg.style.maxHeight = '400px';
-      fallbackImg.style.display = 'block';
-      fallbackImg.style.margin = '20px auto';
-      controls.appendChild(fallbackImg);
-    }
-  };
 
   // Fullscreen button
   const fullscreenBtn = document.getElementById('video-fullscreen');
