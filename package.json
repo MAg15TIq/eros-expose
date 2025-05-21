@@ -1,0 +1,15 @@
+{
+  "name": "eros",
+  "version": "1.0.0",
+  "description": "Eros Exposé is a static, elegant adult content website for showcasing photos and videos. All content is loaded directly from the `src/images` and `src/videos` folders, making it easy to update the gallery by simply adding or removing files.",
+  "main": "generate-manifest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "image-size": "^2.0.2"
+  }
+}
