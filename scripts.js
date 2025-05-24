@@ -825,21 +825,17 @@ function openVideoModal(video) {
 
   // Prepare the video path - use direct path first
   let videoPath = video.path;
-  if (videoPath.startsWith('/')) {
-    videoPath = videoPath.substring(1);
-  }
-
-  // Use the direct path without encoding first
-  let encodedPath = videoPath;
+  // Resolve this path using the utility
+  let resolvedVideoPath = resolvePath(videoPath);
 
   // Set the video title
   title.textContent = video.title || baseName;
 
   // Log the video source for debugging
-  console.log('Video source:', encodedPath);
+  console.log('Video source:', resolvedVideoPath);
 
   // Use our enhanced video player to load the video
-  window.enhancedPlayer.loadVideo(encodedPath, video.title || baseName, (errorMessage, fileExt) => {
+  window.enhancedPlayer.loadVideo(resolvedVideoPath, video.title || baseName, (errorMessage, fileExt) => {
     // Error callback - handle errors from the video player
     console.error('Video player error:', errorMessage);
 
@@ -889,7 +885,7 @@ function openVideoModal(video) {
 
     // Add download button
     const downloadButton = document.createElement('a');
-    downloadButton.href = encodedPath;
+  downloadButton.href = resolvedVideoPath;
     downloadButton.download = baseName + '.' + ext;
     downloadButton.textContent = '⬇️ Download This Video ⬇️';
     downloadButton.style.display = 'block';
