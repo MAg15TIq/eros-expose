@@ -832,12 +832,23 @@ function openVideoModal(video) {
   title.textContent = video.title || baseName;
 
   // Log the video source for debugging
-  console.log('Video source:', resolvedVideoPath);
+  // console.log('Video source:', resolvedVideoPath); // Original log, replaced by more detailed ones below
+
+  // --- Detailed logging before loading video ---
+  console.log('[openVideoModal] Video object:', JSON.stringify(video));
+  console.log('[openVideoModal] Attempting to load video with baseName:', baseName, 'ext:', ext);
+  console.log('[openVideoModal] Resolved video path:', resolvedVideoPath);
+  // --- End detailed logging ---
 
   // Use our enhanced video player to load the video
   window.enhancedPlayer.loadVideo(resolvedVideoPath, video.title || baseName, (errorMessage, fileExt) => {
     // Error callback - handle errors from the video player
-    console.error('Video player error:', errorMessage);
+    // console.error('Video player error:', errorMessage); // Original log, replaced by more detailed ones below
+
+    // --- Detailed logging inside onError callback ---
+    console.error('[openVideoModal] Video player error. Message:', errorMessage, 'File extension:', fileExt);
+    console.error('[openVideoModal] Failing path was:', resolvedVideoPath);
+    // --- End detailed logging ---
 
     // Remove loading message
     controls.innerHTML = '';
